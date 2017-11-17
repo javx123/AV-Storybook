@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yGs-4P-cDY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42" y="125"/>
+        </scene>
+        <!--Story Part View Controller-->
+        <scene sceneID="Yba-qI-sXZ">
+            <objects>
+                <viewController storyboardIdentifier="initialPage" id="oKG-2W-bim" customClass="StoryPartViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ucq-VF-dce">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XIo-3G-Nz9">
+                                <rect key="frame" x="16" y="20" width="343" height="253"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="253" id="Nqp-7h-3JV"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="aOw-r6-2F1" appends="YES" id="PPe-LU-Wad"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jab-IU-lbe">
+                                <rect key="frame" x="160" y="323" width="55" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="cameraButton:" destination="oKG-2W-bim" eventType="touchUpInside" id="X9Y-8M-tqC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbT-Dc-03l">
+                                <rect key="frame" x="146" y="373" width="82" height="30"/>
+                                <state key="normal" title="Microphone"/>
+                                <connections>
+                                    <action selector="microphoneButton:" destination="oKG-2W-bim" eventType="touchUpInside" id="GGk-Co-StP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GbT-Dc-03l" firstAttribute="leading" secondItem="ayw-8K-CdD" secondAttribute="leading" constant="146" id="1Iq-Kr-RSf"/>
+                            <constraint firstItem="ayw-8K-CdD" firstAttribute="trailing" secondItem="XIo-3G-Nz9" secondAttribute="trailing" constant="16" id="DlJ-Y4-Dih"/>
+                            <constraint firstItem="ayw-8K-CdD" firstAttribute="trailing" secondItem="GbT-Dc-03l" secondAttribute="trailing" constant="147" id="Klb-Em-FTv"/>
+                            <constraint firstItem="XIo-3G-Nz9" firstAttribute="leading" secondItem="ayw-8K-CdD" secondAttribute="leading" constant="16" id="YEe-FR-def"/>
+                            <constraint firstItem="XIo-3G-Nz9" firstAttribute="top" secondItem="ayw-8K-CdD" secondAttribute="top" id="bxp-Sm-cjd"/>
+                            <constraint firstItem="Jab-IU-lbe" firstAttribute="leading" secondItem="ayw-8K-CdD" secondAttribute="leading" constant="160" id="hXQ-kq-7VG"/>
+                            <constraint firstItem="GbT-Dc-03l" firstAttribute="top" secondItem="Jab-IU-lbe" secondAttribute="bottom" constant="20" id="hYZ-Ts-z1L"/>
+                            <constraint firstItem="Jab-IU-lbe" firstAttribute="top" secondItem="XIo-3G-Nz9" secondAttribute="bottom" constant="50" id="ir6-zE-Ul2"/>
+                            <constraint firstItem="ayw-8K-CdD" firstAttribute="trailing" secondItem="Jab-IU-lbe" secondAttribute="trailing" constant="160" id="rTk-Ae-Tue"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ayw-8K-CdD"/>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="XIo-3G-Nz9" id="M45-z4-4E8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GrY-yU-mSx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="aOw-r6-2F1">
+                    <connections>
+                        <action selector="tapImage:" destination="oKG-2W-bim" id="i8A-hk-gb8"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="943.20000000000005" y="124.58770614692655"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="OXK-Ia-R2A">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="yGs-4P-cDY" customClass="PageViewController" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dho-ik-hgy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-705" y="103"/>
+        </scene>
+    </scenes>
+</document>
